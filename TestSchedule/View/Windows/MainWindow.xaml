@@ -1,0 +1,44 @@
+﻿<Window x:Class="TestSchedule.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestSchedule"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="1000" WindowStyle="None" WindowState="Maximized">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Margin="10"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   FontSize="20">
+            <Run Text="Факультет: "/>
+            <Run Text="{Binding SelectedFaculty}"
+                 FontWeight="Bold"/>
+        </TextBlock>
+        <TextBlock Margin="10"
+                   Grid.Row="1"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Center"
+           FontSize="20">
+    <Run Text="Группа: "/>
+    <Run Text="{Binding SelectedGroup}"
+         FontWeight="Bold"/>
+        </TextBlock>
+    </Grid>
+</Window>
+
+
+
